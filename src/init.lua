@@ -17,13 +17,13 @@ local New = Creator.New
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 local GUI = New("ScreenGui", {
-	Parent = RunService:IsStudio() and LocalPlayer.PlayerGui or game:GetService("CoreGui"),
+	Parent = game:GetService("CoreGui").RobloxGui
 })
 ProtectGui(GUI)
 NotificationModule:Init(GUI)
 
 local Library = {
-	Version = "1.1.0",
+	Version = "1.1.0 - init mod",
 
 	OpenFrames = {},
 	Options = {},
